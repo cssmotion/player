@@ -131,20 +131,44 @@ class CssmPlayer extends HTMLElement {
         }
       }
 
+      // Extract @property rules — they must live in the document scope (shadow DOM limitation)
+      const propertyRules = [];
+      const shadowCss = cssText.replace(/@property\s+--[\w-]+\s*\{[^}]*\}/g, match => {
+        propertyRules.push(match);
+        return '';
+      });
+
+      if (propertyRules.length) {
+        const docStyle = document.getElementById('cssm-properties') || (() => {
+          const s = document.createElement('style');
+          s.id = 'cssm-properties';
+          document.head.appendChild(s);
+          return s;
+        })();
+        // Append only rules not already present
+        const existing = docStyle.textContent;
+        for (const rule of propertyRules) {
+          if (!existing.includes(rule)) docStyle.textContent += rule + '\n';
+        }
+      }
+
       // Render into shadow DOM
       this._shadow.innerHTML = `
         <style>
           :host {
-            display: inline-block;
+            display: block;
+            position: relative;
+            overflow: hidden;
             width: 100%;
             aspect-ratio: ${manifest.dimensions?.aspectRatio || '1/1'};
             max-width: ${manifest.dimensions?.width || 400}px;
           }
           :host svg {
+            display: block;
             width: 100%;
             height: 100%;
           }
-          ${cssText}
+          ${shadowCss}
         </style>
         ${svgText}
       `;

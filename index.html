@@ -99,9 +99,6 @@
       width: 200px;
       height: 200px;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .player-wrapper::before {
@@ -117,9 +114,10 @@
     }
 
     cssm-player {
-      width: 200px;
-      height: 200px;
-      display: block;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
       cursor: pointer;
     }
 

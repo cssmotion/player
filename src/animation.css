@@ -9,19 +9,19 @@
 @property --cssm-heart-color {
   syntax: '<color>';
   initial-value: #FF3B5C;
-  inherits: false;
+  inherits: true;
 }
 
 @property --cssm-secondary-color {
   syntax: '<color>';
   initial-value: #FF8FAB;
-  inherits: false;
+  inherits: true;
 }
 
 @property --cssm-accent-color {
   syntax: '<color>';
   initial-value: #FFE66D;
-  inherits: false;
+  inherits: true;
 }
 
 /* ─── Base ─────────────────────────────────────────────────────────────────── */
@@ -33,7 +33,7 @@
 }
 
 #cssm-heart-main {
-  transform-origin: 200px 242px;
+  transform-origin: center center;
   transform-box: fill-box;
   transform: scale(0);
   opacity: 0;
