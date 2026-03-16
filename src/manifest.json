@@ -3,10 +3,10 @@
   "specVersion": "1.0.0",
 
   "identity": {
-    "id": "confetti-burst",
-    "name": "Confetti Burst",
-    "description": "A celebratory confetti explosion with colourful particles. Ideal for success states, onboarding completion, and reward moments.",
-    "tags": ["celebration", "confetti", "success", "onboarding", "particles"],
+    "id": "heart-reaction",
+    "name": "Heart Reaction",
+    "description": "A social-media-style heart reaction. The main heart bounces in with an elastic overshoot, mini hearts float upward, and sparkle dots burst outward. Ideal for like buttons, reactions, and love moments.",
+    "tags": ["heart", "reaction", "like", "love", "social", "feedback"],
     "category": "feedback",
     "generator": "Hand-crafted",
     "createdAt": "2026-03-17T10:00:00Z",
@@ -22,11 +22,11 @@
   },
 
   "playback": {
-    "duration": 1200,
+    "duration": 1300,
     "iterationCount": 1,
     "direction": "normal",
     "fillMode": "forwards",
-    "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+    "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
     "autoplay": true,
     "triggers": {
       "hover": false,
@@ -48,18 +48,18 @@
     "colorScheme": ["light", "dark"],
     "tokens": [
       {
-        "name": "--cssm-primary-color",
+        "name": "--cssm-heart-color",
         "type": "color",
-        "defaultValue": "#FF6B6B",
-        "description": "Primary particle colour",
+        "defaultValue": "#FF3B5C",
+        "description": "Main heart and some mini hearts colour",
         "group": "colors",
         "required": false
       },
       {
         "name": "--cssm-secondary-color",
         "type": "color",
-        "defaultValue": "#4ECDC4",
-        "description": "Secondary particle colour",
+        "defaultValue": "#FF8FAB",
+        "description": "Secondary mini hearts colour",
         "group": "colors",
         "required": false
       },
@@ -67,24 +67,8 @@
         "name": "--cssm-accent-color",
         "type": "color",
         "defaultValue": "#FFE66D",
-        "description": "Accent particle colour",
+        "description": "Sparkle dots and accent hearts colour",
         "group": "colors",
-        "required": false
-      },
-      {
-        "name": "--cssm-duration-scale",
-        "type": "number",
-        "defaultValue": "1",
-        "description": "Duration multiplier (0.5 = 2× faster, 2 = 2× slower)",
-        "group": "timing",
-        "required": false
-      },
-      {
-        "name": "--cssm-particle-size",
-        "type": "number",
-        "defaultValue": "1",
-        "description": "Particle scale multiplier",
-        "group": "shape",
         "required": false
       }
     ]
@@ -98,7 +82,7 @@
   },
 
   "technical": {
-    "cssFeatures": ["@keyframes", "@property", "clip-path"],
+    "cssFeatures": ["@keyframes", "@property"],
     "scrollDriven": false,
     "viewTransition": false,
     "requiresJS": false,

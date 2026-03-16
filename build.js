@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * build.js — Packages src/ into dist/confetti-burst.cssm
+ * build.js — Packages src/ into dist/heart-reaction.cssm
  *
  * A .cssm file is just a ZIP. This script:
  * 1. Reads all files from src/
  * 2. Validates manifest.json is present
- * 3. Zips them into dist/confetti-burst.cssm
+ * 3. Zips them into dist/heart-reaction.cssm
  *
  * Usage: node build.js
  */
@@ -15,7 +15,7 @@ import { zipSync, strToU8 } from 'fflate';
 import { resolve, basename } from 'path';
 
 const SRC = './src';
-const OUT = './dist/confetti-burst.cssm';
+const OUT = './dist/heart-reaction.cssm';
 
 const files = [
   'manifest.json',
@@ -23,7 +23,7 @@ const files = [
   'animation.css',
 ];
 
-console.log('\n📦 Building confetti-burst.cssm...\n');
+console.log('\n📦 Building heart-reaction.cssm...\n');
 
 const zipContents = {};
 

@@ -1,21 +1,43 @@
 <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" id="cssm-root">
 
-  <!-- Circles - primary color -->
-  <circle class="cssm-p cssm-p1" cx="200" cy="200" r="7"/>
-  <circle class="cssm-p cssm-p2" cx="200" cy="200" r="5"/>
-  <circle class="cssm-p cssm-p3" cx="200" cy="200" r="8"/>
-  <circle class="cssm-p cssm-p4" cx="200" cy="200" r="5"/>
+  <!-- ── Main center heart ── -->
+  <g id="cssm-heart-main" transform="translate(200,242)">
+    <path
+      d="M0,12 C0,12 -52,-26 -52,-58 C-52,-84 -26,-97 0,-72 C26,-97 52,-84 52,-58 C52,-26 0,12 0,12 Z"
+      fill="var(--cssm-heart-color)"
+    />
+  </g>
 
-  <!-- Small squares - secondary color -->
-  <rect class="cssm-p cssm-p5" x="196" y="196" width="9" height="9"/>
-  <rect class="cssm-p cssm-p6" x="197" y="197" width="7" height="7"/>
-  <rect class="cssm-p cssm-p7" x="196" y="196" width="10" height="10"/>
-  <rect class="cssm-p cssm-p8" x="197" y="197" width="8" height="8"/>
+  <!-- ── Floating mini hearts ── -->
+  <g id="cssm-h1" transform="translate(200,242)" opacity="0">
+    <path d="M0,5 C0,5 -18,-9 -18,-20 C-18,-29 -9,-33 0,-25 C9,-33 18,-29 18,-20 C18,-9 0,5 0,5 Z" fill="var(--cssm-heart-color)"/>
+  </g>
 
-  <!-- Thin rectangles - accent color -->
-  <rect class="cssm-p cssm-p9"  x="198" y="195" width="5" height="12"/>
-  <rect class="cssm-p cssm-p10" x="195" y="198" width="12" height="5"/>
-  <rect class="cssm-p cssm-p11" x="198" y="195" width="5" height="14"/>
-  <rect class="cssm-p cssm-p12" x="195" y="198" width="14" height="5"/>
+  <g id="cssm-h2" transform="translate(200,242)" opacity="0">
+    <path d="M0,4 C0,4 -13,-6 -13,-15 C-13,-21 -6,-24 0,-18 C6,-24 13,-21 13,-15 C13,-6 0,4 0,4 Z" fill="var(--cssm-accent-color)"/>
+  </g>
+
+  <g id="cssm-h3" transform="translate(200,242)" opacity="0">
+    <path d="M0,5 C0,5 -18,-9 -18,-20 C-18,-29 -9,-33 0,-25 C9,-33 18,-29 18,-20 C18,-9 0,5 0,5 Z" fill="var(--cssm-accent-color)"/>
+  </g>
+
+  <g id="cssm-h4" transform="translate(200,242)" opacity="0">
+    <path d="M0,4 C0,4 -13,-6 -13,-15 C-13,-21 -6,-24 0,-18 C6,-24 13,-21 13,-15 C13,-6 0,4 0,4 Z" fill="var(--cssm-secondary-color)"/>
+  </g>
+
+  <g id="cssm-h5" transform="translate(200,242)" opacity="0">
+    <path d="M0,4 C0,4 -15,-8 -15,-17 C-15,-24 -8,-28 0,-21 C8,-28 15,-24 15,-17 C15,-8 0,4 0,4 Z" fill="var(--cssm-secondary-color)"/>
+  </g>
+
+  <g id="cssm-h6" transform="translate(200,242)" opacity="0">
+    <path d="M0,3 C0,3 -10,-5 -10,-12 C-10,-17 -5,-19 0,-14 C5,-19 10,-17 10,-12 C10,-5 0,3 0,3 Z" fill="var(--cssm-heart-color)"/>
+  </g>
+
+  <!-- ── Sparkle dots ── -->
+  <circle id="cssm-s1" cx="200" cy="242" r="4" fill="var(--cssm-accent-color)"    opacity="0"/>
+  <circle id="cssm-s2" cx="200" cy="242" r="3" fill="var(--cssm-secondary-color)" opacity="0"/>
+  <circle id="cssm-s3" cx="200" cy="242" r="3" fill="var(--cssm-heart-color)"     opacity="0"/>
+  <circle id="cssm-s4" cx="200" cy="242" r="4" fill="var(--cssm-accent-color)"    opacity="0"/>
+  <circle id="cssm-s5" cx="200" cy="242" r="3" fill="var(--cssm-secondary-color)" opacity="0"/>
 
 </svg>
