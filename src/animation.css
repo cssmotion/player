@@ -1,0 +1,164 @@
+/* ─── CSSMotion: confetti-burst ─────────────────────────────────────────────
+   animation.css — all motion lives here, zero JavaScript required.
+   Tokens are registered with @property so they are typed and animatable.
+   All selectors are scoped under #cssm-root to prevent host-page conflicts.
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ─── Token Registrations ──────────────────────────────────────────────────── */
+
+@property --cssm-primary-color {
+  syntax: '<color>';
+  initial-value: #FF6B6B;
+  inherits: false;
+}
+
+@property --cssm-secondary-color {
+  syntax: '<color>';
+  initial-value: #4ECDC4;
+  inherits: false;
+}
+
+@property --cssm-accent-color {
+  syntax: '<color>';
+  initial-value: #FFE66D;
+  inherits: false;
+}
+
+@property --cssm-particle-size {
+  syntax: '<number>';
+  initial-value: 1;
+  inherits: false;
+}
+
+@property --cssm-duration-scale {
+  syntax: '<number>';
+  initial-value: 1;
+  inherits: false;
+}
+
+/* ─── Base Styles ──────────────────────────────────────────────────────────── */
+
+#cssm-root {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* All particles start hidden and centered */
+.cssm-p {
+  opacity: 0;
+  transform-origin: 200px 200px;
+  transform-box: fill-box;
+}
+
+/* ─── Color Assignments ────────────────────────────────────────────────────── */
+
+.cssm-p1, .cssm-p2, .cssm-p3, .cssm-p4 {
+  fill: var(--cssm-primary-color);
+}
+
+.cssm-p5, .cssm-p6, .cssm-p7, .cssm-p8 {
+  fill: var(--cssm-secondary-color);
+}
+
+.cssm-p9, .cssm-p10, .cssm-p11, .cssm-p12 {
+  fill: var(--cssm-accent-color);
+}
+
+/* ─── Keyframes — unique trajectory per particle ───────────────────────────── */
+
+@keyframes cssm-burst-p1 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(-110px, -130px) rotate(680deg) scale(0); opacity: 0; }
+}
+
+@keyframes cssm-burst-p2 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(120px, -100px) rotate(-520deg) scale(0); opacity: 0; }
+}
+
+@keyframes cssm-burst-p3 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(-90px, 115px) rotate(440deg) scale(0); opacity: 0; }
+}
+
+@keyframes cssm-burst-p4 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(100px, 95px) rotate(-600deg) scale(0); opacity: 0; }
+}
+
+@keyframes cssm-burst-p5 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(-130px, -40px) rotate(360deg) scale(0); opacity: 0; }
+}
+
+@keyframes cssm-burst-p6 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(140px, -50px) rotate(-720deg) scale(0); opacity: 0; }
+}
+
+@keyframes cssm-burst-p7 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(-60px, 140px) rotate(540deg) scale(0); opacity: 0; }
+}
+
+@keyframes cssm-burst-p8 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(80px, 130px) rotate(-480deg) scale(0); opacity: 0; }
+}
+
+@keyframes cssm-burst-p9 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(-30px, -150px) rotate(600deg) scale(0); opacity: 0; }
+}
+
+@keyframes cssm-burst-p10 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(30px, -140px) rotate(-400deg) scale(0); opacity: 0; }
+}
+
+@keyframes cssm-burst-p11 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(-115px, 60px) rotate(480deg) scale(0); opacity: 0; }
+}
+
+@keyframes cssm-burst-p12 {
+  0%   { transform: translate(0px, 0px) rotate(0deg) scale(1);    opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(110px, 70px) rotate(-560deg) scale(0); opacity: 0; }
+}
+
+/* ─── Animation — only plays when host has [playing] attribute ─────────────── */
+
+:host([playing]) .cssm-p1  { animation: cssm-burst-p1  1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.00s 1 forwards; }
+:host([playing]) .cssm-p2  { animation: cssm-burst-p2  1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s 1 forwards; }
+:host([playing]) .cssm-p3  { animation: cssm-burst-p3  1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.02s 1 forwards; }
+:host([playing]) .cssm-p4  { animation: cssm-burst-p4  1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.08s 1 forwards; }
+:host([playing]) .cssm-p5  { animation: cssm-burst-p5  0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.04s 1 forwards; }
+:host([playing]) .cssm-p6  { animation: cssm-burst-p6  1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.01s 1 forwards; }
+:host([playing]) .cssm-p7  { animation: cssm-burst-p7  1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.06s 1 forwards; }
+:host([playing]) .cssm-p8  { animation: cssm-burst-p8  1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.03s 1 forwards; }
+:host([playing]) .cssm-p9  { animation: cssm-burst-p9  0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.07s 1 forwards; }
+:host([playing]) .cssm-p10 { animation: cssm-burst-p10 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.02s 1 forwards; }
+:host([playing]) .cssm-p11 { animation: cssm-burst-p11 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s 1 forwards; }
+:host([playing]) .cssm-p12 { animation: cssm-burst-p12 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.00s 1 forwards; }
+
+/* ─── Reduced Motion ───────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  :host([playing]) .cssm-p {
+    animation: none;
+    opacity: 0;
+  }
+}

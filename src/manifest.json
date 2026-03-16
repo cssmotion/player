@@ -1,0 +1,117 @@
+{
+  "$schema": "https://cssmotion.dev/schema/1.0.0/manifest.json",
+  "specVersion": "1.0.0",
+
+  "identity": {
+    "id": "confetti-burst",
+    "name": "Confetti Burst",
+    "description": "A celebratory confetti explosion with colourful particles. Ideal for success states, onboarding completion, and reward moments.",
+    "tags": ["celebration", "confetti", "success", "onboarding", "particles"],
+    "category": "feedback",
+    "generator": "Hand-crafted",
+    "createdAt": "2026-03-17T10:00:00Z",
+    "updatedAt": "2026-03-17T10:00:00Z",
+    "revision": 1
+  },
+
+  "attribution": {
+    "author": "Mushfau Saeed",
+    "organization": "CSSMotion",
+    "url": "https://cssmotion.dev",
+    "license": "MIT"
+  },
+
+  "playback": {
+    "duration": 1200,
+    "iterationCount": 1,
+    "direction": "normal",
+    "fillMode": "forwards",
+    "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+    "autoplay": true,
+    "triggers": {
+      "hover": false,
+      "click": true,
+      "inView": true,
+      "scroll": false
+    },
+    "intermission": 0
+  },
+
+  "dimensions": {
+    "width": 400,
+    "height": 400,
+    "aspectRatio": "1/1",
+    "scalingBehavior": "contain"
+  },
+
+  "theming": {
+    "colorScheme": ["light", "dark"],
+    "tokens": [
+      {
+        "name": "--cssm-primary-color",
+        "type": "color",
+        "defaultValue": "#FF6B6B",
+        "description": "Primary particle colour",
+        "group": "colors",
+        "required": false
+      },
+      {
+        "name": "--cssm-secondary-color",
+        "type": "color",
+        "defaultValue": "#4ECDC4",
+        "description": "Secondary particle colour",
+        "group": "colors",
+        "required": false
+      },
+      {
+        "name": "--cssm-accent-color",
+        "type": "color",
+        "defaultValue": "#FFE66D",
+        "description": "Accent particle colour",
+        "group": "colors",
+        "required": false
+      },
+      {
+        "name": "--cssm-duration-scale",
+        "type": "number",
+        "defaultValue": "1",
+        "description": "Duration multiplier (0.5 = 2× faster, 2 = 2× slower)",
+        "group": "timing",
+        "required": false
+      },
+      {
+        "name": "--cssm-particle-size",
+        "type": "number",
+        "defaultValue": "1",
+        "description": "Particle scale multiplier",
+        "group": "shape",
+        "required": false
+      }
+    ]
+  },
+
+  "accessibility": {
+    "reducedMotionBehavior": "static",
+    "flashRisk": "none",
+    "seizureRisk": false,
+    "wcagLevel": "AA"
+  },
+
+  "technical": {
+    "cssFeatures": ["@keyframes", "@property", "clip-path"],
+    "scrollDriven": false,
+    "viewTransition": false,
+    "requiresJS": false,
+    "minBrowserSupport": {
+      "chrome": "111",
+      "firefox": "116",
+      "safari": "16.4",
+      "edge": "111"
+    }
+  },
+
+  "assets": {
+    "svg": "animation.svg",
+    "css": "animation.css"
+  }
+}

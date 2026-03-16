@@ -1,0 +1,36 @@
+{
+  "name": "@cssm/player",
+  "version": "1.0.0",
+  "description": "The <cssm-player> web component — load and play .cssm animations with zero runtime",
+  "type": "module",
+  "main": "cssm-player.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "npx serve . --cors"
+  },
+  "files": [
+    "cssm-player.js",
+    "dist/"
+  ],
+  "keywords": [
+    "css",
+    "animation",
+    "cssm",
+    "cssmotion",
+    "web-component",
+    "custom-elements"
+  ],
+  "author": "Mushfau Saeed <mushfau@cssmotion.dev> (https://cssmotion.dev)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cssmotion/player.git"
+  },
+  "homepage": "https://cssmotion.dev",
+  "dependencies": {
+    "fflate": "^0.8.2"
+  },
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}
