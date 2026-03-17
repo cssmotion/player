@@ -8,11 +8,13 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0f0f13;
+      --bg: #0D0D12;
       --surface: #1a1a24;
       --border: #2a2a38;
       --text: #e8e8f0;
       --muted: #6b6b80;
+      --brand: #7C3AED;
+      --brand-light: #A78BFA;
       --heart: #FF3B5C;
       --heart-soft: #FF8FAB;
       --accent: #FFE66D;
@@ -58,9 +60,26 @@
     .badge-dot {
       width: 6px; height: 6px;
       border-radius: 50%;
-      background: var(--heart);
+      background: var(--brand);
       animation: pulse 2s ease-in-out infinite;
     }
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.25rem;
+    }
+
+    .brand-mark { height: 28px; width: 28px; }
+
+    .brand-name {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+    .brand-name span { color: var(--brand); }
 
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
@@ -255,7 +274,7 @@
       color: var(--muted);
       padding-bottom: 1rem;
     }
-    footer a { color: var(--heart-soft); text-decoration: none; }
+    footer a { color: var(--brand-light); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
   </style>
 </head>
@@ -264,7 +283,15 @@
 <div class="page">
 
   <header>
-    <div class="badge"><div class="badge-dot"></div>CSSMotion · Live Demo</div>
+    <div class="brand-header">
+      <svg class="brand-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="9,16 13,20 9,24 5,20" fill="#7C3AED" opacity="0.18"/>
+        <polygon points="15,12 22,19 15,26 8,19" fill="#7C3AED" opacity="0.45"/>
+        <polygon points="22,8 30,16 22,24 14,16" fill="#7C3AED"/>
+      </svg>
+      <div class="brand-name">CSS<span>Motion</span></div>
+    </div>
+    <div class="badge"><div class="badge-dot"></div>Live Demo</div>
     <h1>heart<span>-reaction</span>.cssm</h1>
     <p class="subtitle">
       A 3.1KB animation bundle — pure SVG shapes + CSS keyframes, zero JavaScript runtime.
