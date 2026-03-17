@@ -1,0 +1,11 @@
+<svg width="180" height="36" viewBox="0 0 180 36" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="36" rx="6" fill="#0D0D12"/>
+  <!-- Mark (small) -->
+  <polygon points="14,18  18,22  14,26  10,22" fill="#7C3AED" opacity="0.25"/>
+  <polygon points="19,14  25,20  19,26  13,20" fill="#7C3AED" opacity="0.55"/>
+  <polygon points="25,11  33,19  25,27  17,19" fill="#7C3AED"/>
+  <!-- Text -->
+  <text x="41" y="20" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="500" letter-spacing="0.03em" fill="#7C3AED">cssm</text>
+  <line x1="74" y1="9" x2="74" y2="27" stroke="white" stroke-width="0.5" opacity="0.12"/>
+  <text x="82" y="20" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11" font-weight="400" letter-spacing="0.09em" fill="rgba(255,255,255,0.45)">CSSMotion</text>
+</svg>

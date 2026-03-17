@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../cssm-brand/badge/cssm-badge-dark.svg" alt="CSSMotion" />
+  <img src="./assets/cssm-badge-dark.svg" alt="CSSMotion" />
 </p>
 
 # @cssm/player
