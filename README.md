@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../cssm-brand/badge/cssm-badge-dark.svg" alt="CSSMotion" />
+</p>
+
 # @cssm/player
 
 > The `<cssm-player>` web component. Load and play `.cssm` animations in any browser — zero runtime, pure CSS.
